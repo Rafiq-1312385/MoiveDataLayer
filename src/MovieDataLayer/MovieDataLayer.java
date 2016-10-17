@@ -16,20 +16,20 @@ public class MovieDataLayer {
 	static int i=0;
 	Film film= new Film();
 	List<Film> flims;
-	public static String Film_ID;
-	public static String Film_Name;
-	public static String IMDB_Rating;
-	public static String Director_ID;
-	public static String Director_Name;
-	public static String Actor_ID;
-	public static String Actor_Name;
-	public static String Year;
+	public String Film_ID;
+	public String Film_Name;
+	public String IMDB_Rating;
+	public String Director_ID;
+	public String Director_Name;
+	public String Actor_ID;
+	public String Actor_Name;
+	public String Year;
 
 	static List<Director> Director_Names = new ArrayList<Director>();
 	static List<Actor> Actor_Names = new ArrayList<Actor>();
 
 
-	private static  void MovieDataLayer() {
+	public void MovieDataLayer() {
 		BufferedReader br;
 		try {
 			br = new BufferedReader(new FileReader("TestData.csv"));
