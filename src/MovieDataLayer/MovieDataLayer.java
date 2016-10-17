@@ -15,6 +15,7 @@ import MovieClassLayer.Film;
 public class MovieDataLayer {
 	static int i=0;
 	Film film= new Film();
+	Director d = new Director();
 	List<Film> flims;
 	public String Film_ID;
 	public String Film_Name;
@@ -61,6 +62,12 @@ public class MovieDataLayer {
 
 			//this is a test
 			//Film f= new Film (Film_ID,Film_Name,IMDB_Rating,Director_Names,Actor_Names,Year);
+			//Film f= new Film (Film_ID,Film_Name,IMDB_Rating,Year);
+			//Film f= new Film ();
+			//Director f = new Director(Director_ID, Director_Name);
+			//Director f = new Director();
+
+			
 			
 		}
 		} catch (FileNotFoundException e) {
