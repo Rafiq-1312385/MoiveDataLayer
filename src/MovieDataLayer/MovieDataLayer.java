@@ -60,6 +60,7 @@ public class MovieDataLayer {
 			a.getActorName();
 			Actor_Names.add(a);
 
+			System.out.println("test");
 			
 		}
 		} catch (FileNotFoundException e) {
