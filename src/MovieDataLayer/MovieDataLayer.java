@@ -13,7 +13,7 @@ import MovieClassLayer.Director;
 import MovieClassLayer.Film;
 
 public class MovieDataLayer {
-	static int i=0;
+	
 	Film film= new Film();
 	Director d = new Director();
 	List<Film> flims;
@@ -34,13 +34,13 @@ public class MovieDataLayer {
 		BufferedReader br;
 		try {
 			br = new BufferedReader(new FileReader("TestData.csv"));
-		String line = br.readLine(); // Reading header, Ignoring
+		String line = br.readLine(); // Reading header. Ignores the first line.
 
 		while ((line = br.readLine()) != null && !line.isEmpty()) {
-			String[] fields = line.split(",");
+			String[] fields = line.split(","); //Splits the line by comma values
 
-			Film_ID = fields[0];
-			Film_Name = fields[1];
+			Film_ID = fields[0]; //Stores the content at position 0 in Film_ID.
+			Film_Name = fields[1]; 
 			IMDB_Rating = fields[2];
 			Director_ID = fields[3];
 			Director_Name = fields[4];
@@ -48,7 +48,8 @@ public class MovieDataLayer {
 			Actor_Name = fields[6];
 			Year = fields[7];
 
-
+ 
+			//Here it will form the list of Actors and Directors. 
 			Director d = new Director();
 			d.setDirectorName(Director_Name);
 			d.getDirectorName();
@@ -59,8 +60,9 @@ public class MovieDataLayer {
 			a.setActorName(Actor_Name);
 			a.getActorName();
 			Actor_Names.add(a);
+			
+			
 
-			System.out.println("ha");
 			
 		}
 		} catch (FileNotFoundException e) {
