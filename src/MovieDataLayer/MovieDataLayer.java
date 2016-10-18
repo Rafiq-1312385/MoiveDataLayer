@@ -30,7 +30,7 @@ public class MovieDataLayer {
 	static List<Actor> Actor_Names = new ArrayList<Actor>();
 
 
-	public void MovieDataLayer() {
+	public MovieDataLayer() {
 		BufferedReader br;
 		try {
 			br = new BufferedReader(new FileReader("TestData.csv"));
